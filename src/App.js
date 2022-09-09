@@ -10,29 +10,32 @@ import Login from './Components/Login/Login';
 import User from './Components/User/User';
 import { UserStorage} from './UseContext';
 import Photo from './Components/Photo/Photo';
-
+import UserProfile from './Components/User/UserProfile';
 
 function App() {
   return (
-   <div>
-    <BrowserRouter>
-    <UserStorage>
-   <Header/>
-    <Routes>
-      <Route path="/" element={<Home/>}/>
-      <Route path="login/*" element={<Login/>}/>
-      <Route
-       path="conta/*"
-        element={
-        <ProtectedRoute>
-          <User/>
-          </ProtectedRoute>}/>
-      <Route path="fotos/:id" element={<Photo/>}/>
-    </Routes>
-   <Footer/>
-   </UserStorage>
-   </BrowserRouter>
-   </div>
+    <div>
+      <BrowserRouter>
+        <UserStorage>
+          <Header />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="login/*" element={<Login />} />
+            <Route
+              path="conta/*"
+              element={
+                <ProtectedRoute>
+                  <User />
+                </ProtectedRoute>
+              }
+            />
+            <Route path="foto/:id" element={<Photo />} />
+            <Route path="perfil/:user" element={<UserProfile />} />
+          </Routes>
+          <Footer />
+        </UserStorage>
+      </BrowserRouter>
+    </div>
   );
 }
 
