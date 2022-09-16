@@ -10,6 +10,7 @@
     border-radius: 0.2rem;
     display: grid;
     align-items: center;
+    touch-action: visible;
   }
   
   .total {
@@ -25,5 +26,10 @@
     .total {
       grid-column: 1;
     }
+
+    .graphItem :global(.VictoryContainer) {
+      touch-action:initial !important;
   }
+    
+}
   

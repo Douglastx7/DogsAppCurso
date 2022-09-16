@@ -3,6 +3,7 @@
     grid-template-columns: 1fr 1fr;
     min-height: 100vh;
     gap: 2rem;
+
 }
 
 .login::before {
@@ -19,12 +20,14 @@
 }
 
 @media (max-width: 40rem) {
-    .Login {
+ 
+    .login { 
         grid-template-columns: 1fr;
     }
 
     .login::before {
        display: none;
+     
     }
 
     .forms {
